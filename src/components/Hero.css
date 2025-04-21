@@ -13,7 +13,7 @@
   align-items: center;            /* ← horizontal center */
 
   /* give a little breathing room from the very bottom */
-  padding-bottom: 15vh;
+  padding-bottom: 10vh;
 }
 
 .hero::before {
@@ -29,26 +29,18 @@
     z-index: 2;
     text-align: center;
     color: #fff;
-  
-    /* either remove entirely: */
-    /* max-width: none; */
-  
-    /* or bump it way up: */
     max-width: 1200px;
-  
-    /* and let it grow to 90% of the viewport: */
     width: 90%;
-  
     margin: 0 auto;
   }
   
 
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-weight: 700;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 1rem);
   line-height: 1.2;
 }
