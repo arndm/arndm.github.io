@@ -1,0 +1,54 @@
+/* Navbar.css */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+  
+    background: rgba(0, 0, 0, 0.4);    /* ← dark translucent */
+    backdrop-filter: none;             /* no blur initially */
+    box-shadow: none;
+    transition: background 0.3s ease,
+                backdrop-filter 0.3s ease,
+                box-shadow 0.3s ease;
+    z-index: 10;
+  }
+  
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.2);  /* ← light glass */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links a {
+    color: #fff;                       /* always white over dark bg */
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s, transform 0.2s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700;
+    transform: translateY(-2px);
+  }
+  
+/* When user scrolls past hero, switch to light “glass” */
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar.scrolled .nav-links a {
+    color: #333;    /* dark links for contrast on light bg */
+  }
+  .navbar.scrolled .nav-links a:hover {
+    color: #000;
+  }
+  
+  
